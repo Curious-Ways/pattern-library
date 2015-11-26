@@ -1,0 +1,37 @@
+/*==============================================================
+
+Lists
+
+File: SCSS Partial (/scss/base/_lists.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Base rules for lists
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Definition lists
+  -------------------------------------------------------- */
+
+  dl {
+  	overflow: hidden;
+  	margin: 0 0 $space;
+  }
+
+  dt {
+    border-bottom: 1px solid $clr-keyline;
+  	font-weight: bold;
+    display: inline-block;
+    margin-bottom: $space/2;
+  }
+
+  dd {
+  	margin: 0 0 $space;
+  }

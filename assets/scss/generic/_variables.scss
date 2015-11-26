@@ -1,0 +1,90 @@
+/*==============================================================
+
+Variables
+
+File: SCSS Partial (/scss/generic/_variables.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: All variables
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+
+
+/* Base
+  -------------------------------------------------------- */
+
+  $base-clr: #404040;
+  $base-fnt: "A2 Regular Semi Bold", Futura, sans-serif;
+  $base-fnt-size: 16px;
+  $base-fnt-weight: 600;
+  $base-fnt-style: normal;
+  $base-line-height: 24px; 
+  $space: 20px;
+
+/* Colors
+  -------------------------------------------------------- */ 
+
+  // Main
+  $clr-temp: #000;
+
+  $clr-1: #ffcf44; // Bright Sun
+  $clr-2: #9e9f9a; // Star Dust
+  $clr-3: #f8b6ba; // Illusion
+  $clr-4: #76c58c; // De York
+  $clr-5: #76ced9; // Viking
+  $clr-6: #8781bd; // Wild Blue Yonder
+
+  // Buttons, highlights, backgrounds & keylines
+  $clr-site-bckgrd: #fff;
+  $clr-utility: $clr-temp;
+  $clr-inverse: $clr-temp;
+  $clr-highlight: $clr-temp;
+  $clr-keyline: $clr-temp; 
+  $clr-bckgrd: $clr-temp;
+  $clr-quiet: $clr-temp;
+
+  // Success & Error
+  $clr-error: rgb(231, 76, 60);
+  $clr-success: rgb(46, 204, 113);
+
+
+/* Fonts
+  -------------------------------------------------------- */ 
+
+  // Sizes
+  @function em($target, $context: $base-fnt-size) {
+     @if $target == 0 { @return 0 }
+     @return $target / $context + 0em;
+  }
+
+  $fnt-giga: em(70px, 20px);
+  $fnt-xlrg: em(50px, 20px);
+  $fnt-lrg: em(30px, 20px);
+  $fnt-med: em(20px, 20px);
+  $fnt-reg: em(20px, 20px);
+  $fnt-sml: em(16px, 20px);
+  $fnt-btn: em(16px, 20px);
+
+
+/* Layout
+  -------------------------------------------------------- */ 
+
+  $max-width: 1000px;
+
+
+/* Breakpoints
+  -------------------------------------------------------- */
+
+  $bp-sml: "only screen and (max-width:500px)";
+  $bp-med: "only screen and (min-width:501px) and (max-width:999px)";
+  $bp-lrg: "only screen and (min-width:1000px)";
+  $bp-sml-up: "only screen and (min-width:501px)";

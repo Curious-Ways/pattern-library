@@ -1,0 +1,53 @@
+/*==============================================================
+
+Navigation
+
+File: SCSS Partial (/scss/partials/_navigation.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Primary, secondary & tertiary navigations
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Menus
+  -------------------------------------------------------- */
+
+  // All
+  // ---------------
+
+  nav {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+
+  	ul, li {
+			margin: 0;
+  	}  
+
+  	li {
+  		list-style-type: none;
+  	}
+
+		a {
+			@include links-primary;
+			@include single-transition(all, 0.2s, ease-in-out);		
+			display: block;
+			text-decoration: none;
+		} 
+
+		> li {
+			&:last-child {
+				margin-right: 0;
+			}			
+		} 	
+  } 
+
+

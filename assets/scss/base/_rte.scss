@@ -1,0 +1,48 @@
+/* RTE
+  -------------------------------------------------------- */
+
+  .rte {
+    img, .fluid-width-video-wrapper {
+      margin-bottom: $space;
+    }
+
+    h2, h3, h4 {
+      color: $clr-temp;
+    }
+  
+    // Lists
+
+    ul, ol {
+      margin: 0 0 $space $space;
+      padding: 0;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }   
+
+    // Nested Lists
+    ol, ul {
+      li ol, li ul {
+        margin: $space/3 0 0 $space;
+      }
+      li ol li, li ul li {
+        margin-bottom: 0;
+      }
+    }
+
+    // Blockquotes
+
+    blockquote {
+      font-style: italic;
+      position: relative;
+    }    
+  }

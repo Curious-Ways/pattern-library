@@ -1,0 +1,285 @@
+/*==============================================================
+
+Pattern Library
+
+File: SCSS file
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Specific styles for the pattern library page
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Site title
+  -------------------------------------------------------- */ 
+
+  .anchor {
+    padding-top: 60px;
+  }
+
+
+  .style-guide-intro {
+    background: $clr-4;
+    height: 100vh;
+
+    .content {
+      color: #fff;
+      @include v-align;
+      text-align: center;
+    }
+  }
+
+    .site-logo {
+      max-width: 200px;
+    } 
+
+  .site-title {
+    font-size: $fnt-giga;
+    margin: 0 0 $space 0;
+    padding: 0;
+  }
+
+  .site-subtitle {
+    font-size: $fnt-med;
+    margin: 0;
+    padding: 0;    
+  }
+
+  .site-navigation-strip {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    background: $clr-4;
+    z-index: 100;
+
+    .site-navigation {
+      @include v-align;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin-right: $space;
+      }
+
+      a {
+        font-size: $fnt-sml;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }   
+  }
+
+
+
+
+
+/* Base style settings
+  -------------------------------------------------------- */  
+
+  .base-fnt {
+    font: #{$base-fnt-size}/#{$base-line-height} $base-fnt;
+  } 
+
+  .base-fnt-size {
+    font-size: $fnt-reg;
+  }
+
+
+/* Patterns
+  -------------------------------------------------------- */
+
+.pattern {
+  clear: both;
+  overflow: hidden;
+
+  h3 {
+    font-size: $fnt-lrg;
+    margin-bottom: $space*2;
+  }
+}
+.pattern .display {
+  //width: 65%;
+  //float: left;
+}
+.pattern .source {
+  display: none;
+  width: 30%;
+  float: right;
+}
+.pattern .source textarea {
+  width: 90%;
+}
+
+
+/* Source
+  -------------------------------------------------------- */
+
+  .source {
+    display: none;
+    border: 1px dashed $clr-keyline;
+    padding: $space/2;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    textarea {
+      font-size: $fnt-sml;      
+    }
+  }
+
+  .grid-box {
+    background: #eee;
+    margin-bottom: 20px;
+
+    p {
+      padding: 10px;
+    }
+  }
+
+
+/* Titles
+  -------------------------------------------------------- */  
+
+  .title-divider {
+    color: #000;
+    border-bottom: 5px solid $clr-keyline;
+    padding-bottom: 10px;
+    font-size: $fnt-lrg; 
+    max-width: $max-width;
+    margin: $space*2 auto;
+    text-align: left;
+  }
+
+
+/* Colors
+  -------------------------------------------------------- */    
+
+  // Wraps
+  .colors {
+    margin: 0;
+    padding: 0;
+  }
+
+  .color-wrap {
+    float: left;
+    list-style-type: none;
+    margin: 0 $space $space 0;
+    padding: $space/2;
+
+  }
+
+  // Color name
+  .color {
+    display: block;
+    margin: $space/4 0 0 0;
+    padding: 0;
+    font-size: $fnt-sml;
+    line-height: 1;
+  }  
+  
+  // Swatches
+  .swatch {
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+
+  // Base
+  .swatch--1 {
+    @extend .swatch;
+    background: $clr-1;
+  }     
+  .swatch--2 {
+    @extend .swatch;
+    background: $clr-2;
+  }    
+  .swatch--3 {
+    @extend .swatch;
+    background: $clr-3;
+  }    
+  .swatch--4 {
+    @extend .swatch;
+    background: $clr-4;
+  }       
+ .swatch--5 {
+   @extend .swatch;
+   background: $clr-5;
+ }  
+  .swatch--6 {
+   @extend .swatch;
+   background: $clr-6;
+ }  
+  // Success & error
+  .swatch--success {
+    @extend .swatch;
+    background: $clr-success;
+  }   
+
+  .swatch--error {
+    @extend .swatch;
+    background: $clr-error;
+  }   
+
+  .grid-box {
+    background: $clr-temp;
+    text-align: center;
+  }    
+
+
+/* Font sizes
+  -------------------------------------------------------- */   
+
+  .fnt-giga {
+    font-size: $fnt-giga;
+  }
+
+  .fnt-xlrg {
+    font-size: $fnt-xlrg;
+  }
+
+  .fnt-lrg {
+    font-size: $fnt-lrg;
+  }
+
+  .fnt-med {
+    font-size: $fnt-med; 
+  }    
+
+  .fnt-reg {
+    font-size: $fnt-reg;
+  }    
+
+  .fnt-sml {
+    font-size: $fnt-sml;
+  }
+
+
+
+/* Cols
+  -------------------------------------------------------- */  
+
+  .column, .column-1-3 {
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .column-1-3 {
+    width: 33%;
+  }
+

@@ -1,0 +1,261 @@
+/*==============================================================
+
+Forms
+
+File: SCSS Partial (/scss/base/_forms.scss)
+Compiled to: css/style.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: Forms
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+
+/* Base
+  -------------------------------------------------------- */
+
+form > div {
+	margin-bottom: $space;
+}
+
+form ol, form ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+label, .gfield_label {
+	display: block;
+	padding-bottom: $space/4;
+	font-size: $fnt-btn;
+}
+
+legend {
+	font-weight: bold;
+	margin-bottom: $space/2;
+}
+
+button, input, select, textarea {
+	@include box-sizing(border-box);
+  font-family: inherit;
+  font-size: $base-fnt-size;
+  line-height: normal; 
+  margin: 0 $space/2 0 0;
+}
+
+select {
+	margin: 0 $space/2 0 1px;	
+}
+
+input, textarea {
+	border: none;
+}
+
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+	-webkit-appearance: none;
+}
+
+button, input[type="submit"] {
+	cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;	
+}
+
+button::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+ 
+input:focus, 
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 $space/2 0 2px;
+}
+
+
+
+/* Screen readers
+  -------------------------------------------------------- */
+	
+	.screen-reader-text {
+		display: none;
+	}
+
+
+/* Fields
+  -------------------------------------------------------- */
+
+	.field, .gfield input, .gfield textarea {
+		background: #fff;
+		@include single-transition(all, 0.2s, ease-in-out);
+		border: 1px solid $clr-keyline;
+		padding: 8px;
+		margin-bottom: $space;
+		width: 100%;
+		
+		&:hover, &:focus {
+			border: 1px solid #000;
+		}	
+	}
+
+
+
+
+/* Gravity Forms
+  -------------------------------------------------------- */
+
+  .ginput_container {
+
+  }
+
+  .gf_right_half {
+		width: 48.9%;
+		float: right;
+  }
+
+  .gf_left_half {
+		width: 48.9%;
+		float: left;
+		margin-right: 10px;
+  }  
+
+	.ginput_complex {
+		@extend %clearfix;
+
+		.ginput_left, .ginput_right {
+			width: 48.9%;
+			float: left;
+
+			input {
+				margin-bottom: 5px;
+			}
+
+			label {
+				margin-bottom: $space/2;
+				font-style: italic;
+				margin-left: 5px;
+				opacity: 0.8;
+			}
+		}
+
+		.ginput_right {
+			float: right;
+		}
+
+		.ginput_left {
+			margin-right: 10px;
+		}
+	}
+
+
+/* Radio buttons
+  -------------------------------------------------------- */
+
+.list-options {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* Placeholder text
+  -------------------------------------------------------- */
+
+	::-webkit-input-placeholder {
+		color: $clr-temp;
+		text-transform: uppercase;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		color: $clr-temp;
+		text-transform: uppercase; 
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: $clr-temp;
+		text-transform: uppercase;
+	}
+
+	:-ms-input-placeholder {  
+		color: $clr-temp;
+		text-transform: uppercase; 
+	}
+
+
+
+// Newsletter
+
+ .newsletter .wrapper-inline {
+
+	::-webkit-input-placeholder {
+		color: $clr-temp;
+		text-transform: uppercase;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+		color: $clr-temp;
+		text-transform: uppercase; 
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+		color: $clr-temp;
+		text-transform: uppercase;
+	}
+
+	:-ms-input-placeholder {  
+		color: $clr-temp;
+		text-transform: uppercase; 
+	}
+
+  margin: 0;
+  position: relative;
+
+  input {
+    @include box-sizing(border-box);
+    float: left;
+    overflow: hidden;   
+  }
+
+  .field {
+    border: 1px solid $clr-temp;
+    margin: 0;
+
+    &:hover, &:focus {
+      border: 1px solid darken($clr-temp, 15%);
+    }
+  }
+
+  button {
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    z-index: 1;   
+    border-radius: 5px;  
+  }
+}  
+

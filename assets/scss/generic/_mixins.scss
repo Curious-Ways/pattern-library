@@ -1,0 +1,130 @@
+/*==============================================================
+
+Mixins
+
+File: SCSS Partial (/scss/partials/_mixins.scss)
+Compiled to: css/global.css
+Created: 16/11/2013
+Updated: 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Description: All mixins
+Author: David Flindall
+Author URI: http://juxprose.com
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+/* Hide mobile
+  -------------------------------------------------------- */
+
+  @mixin hide-small-screens {
+    display: none;
+
+    @media #{$bp-med-up} {
+      display: block;
+    }
+  }
+
+  @mixin hide-large-screens {
+    display: block;
+
+    @media #{$bp-med-up} {
+      display: none;
+    }
+  }  
+
+
+/* Links
+  -------------------------------------------------------- */
+
+  // Base
+  @mixin links-base {
+    @include link-colors($base-clr, darken($base-clr, 35%), darken($base-clr, 35%), $base-clr, darken($base-clr, 35%))
+  }
+
+  // Primary Scheme
+ 	@mixin links-primary {
+ 		@include link-colors($base-clr, lighten($base-clr, 35%), lighten($base-clr, 35%), $base-clr, lighten($base-clr, 35%))
+ 	}
+
+  // Secondary Scheme
+  @mixin links-secondary {
+ 		@include link-colors($clr-temp, lighten($clr-temp, 25%), lighten($clr-temp, 25%), $clr-temp, lighten($clr-temp, 25%))
+ 	}
+
+
+ 	/* Layout
+  -------------------------------------------------------- */ 
+
+  %clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }  
+
+
+/* Lists
+  -------------------------------------------------------- */
+
+  @mixin list-inline {
+
+    li {
+      display: inline-block;      
+      margin-right: $space;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @mixin list-piped {
+
+    li {
+      display: inline-block;      
+      margin-right: 5px;
+
+      &:after {
+        content: " | ";
+        padding-left: 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }  
+
+
+/* Fades
+  -------------------------------------------------------- */ 
+
+  @mixin fade-in {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;    
+  }
+
+
+
+/* Vertical align
+  -------------------------------------------------------- */ 
+
+  @mixin v-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
